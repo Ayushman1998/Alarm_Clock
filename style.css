@@ -1,0 +1,163 @@
+@font-face
+{
+  font-family: digital;
+  src: url(https://res.cloudinary.com/thepeted/raw/upload/v1507751384/DSDIGI_ctlean.ttf);
+}
+
+body{
+    font-family: 'digital';
+    background: var(--color-secondary);
+    color: var(--font-color);
+}
+
+.slider-container{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.slider-label{
+    font-size: 2rem;
+}
+
+.switch {
+    display: inline-block;
+    height: 34px;
+    position: relative;
+    width: 60px;
+  }
+  
+.switch input {
+display:none;
+}
+
+.slider {
+background-color: #ccc;
+bottom: 0;
+cursor: pointer;
+left: 0;
+position: absolute;
+right: 0;
+top: 0;
+transition: .4s;
+}
+
+.slider:before {
+background-color: #fff;
+top: 4px;
+content: "";
+height: 26px;
+left: 4px;
+position: absolute;
+transition: .4s;
+width: 26px;
+box-shadow: 0 0px 15px #2020203d;
+}
+
+input:checked + .slider {
+background-color: #4c5ec4;
+}
+
+input:checked + .slider:before {
+transform: translateX(26px);
+}
+
+.slider.round {
+border-radius: 34px;
+}
+
+.slider.round:before {
+border-radius: 50%;
+}
+
+.theme-light {
+    --color-primary: #0060df;
+    --color-secondary: #fbfbfe;
+    --color-accent: #fd6f53;
+    --font-color: #000000;
+}
+
+.theme-dark {
+    --color-primary: #17ed90;
+    --color-secondary: #2a2c2d;
+    --color-accent: #12cdea;
+    --font-color: #ffffff;
+}
+
+h2{
+    text-align: center;
+    font-size: 2rem;
+}
+
+#current-time{
+    font-weight: 700;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+#timer{
+    font-weight: 700;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 20px;
+}
+
+.stopwatch-button{
+    display: flex;
+    justify-content: space-around;
+    margin: auto;
+    width: 200px;
+}
+
+.alarm-clock{
+    display: flex;
+    justify-content: space-around;
+    margin: auto;
+    width: 400px;
+    padding-bottom: 20px;
+}
+
+.alarm-clock-button{
+    display: flex;
+    justify-content: space-around;
+    margin: auto;
+    width: 200px;
+}
+
+#alarmhrs, #alarmmins, #alarmsecs{
+    font-size: 1.5rem;
+    font-family: 'digital';
+}
+
+button{
+    box-sizing: border-box;
+    appearance: none;
+    background-color: transparent;
+    border: 2px solid #e74c3c;
+    border-radius: 0.6em;
+    color: #e74c3c;
+    cursor: pointer;
+    display: flex;
+    align-self: center;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1;
+    margin: 20px;
+    padding: 1.2em 2.8em;
+    text-decoration: none;
+    text-align: center;
+    text-transform: uppercase;
+    transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+}
+
+button:hover{
+    box-shadow: 0 0 40px 40px #e74c3c inset;
+    color: #fff;
+    border: 2px solid #e74c3c;
+}
+
+button:active{
+    border: 2px solid transparent;
+}

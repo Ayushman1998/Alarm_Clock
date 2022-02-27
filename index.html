@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" class="theme-light">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TITLE</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <!-- Theme Toggle -->
+    <div class="slider-container">
+      <div class="slider-label">THEME</div>
+      <label class="switch" for="checkbox">
+        <input type="checkbox" onchange="toggleTheme()" id="checkbox" />
+        <div class="slider round"></div>
+      </label>
+    </div>
+
+    <!-- Clock -->
+    <hr>
+
+    <h2>Digital Clock</h2>
+
+    <div id="current-time">
+
+    </div>
+
+    <!-- StopWatch -->
+    <hr>
+    <h2>
+        Stop Watch
+    </h2>
+    <div id="timer">
+        00 : 00 : 00 : 000
+    </div>
+    <div class="stopwatch-button">
+        <button onclick="startTimer()">
+            Start
+        </button>
+
+        <button onclick="stopTimer()">
+            Stop
+        </button>
+
+        <button onclick="resetTimer()">
+            Reset
+        </button>
+    </div>
+
+    <!-- AlarmClock -->
+
+    <hr>
+    <h2>Alarm Clock</h2>
+      <div class="alarm-clock">
+        <label>
+          <div>
+          <select id='alarmhrs' ></select>
+          </div>
+        </label>
+        <label>
+          <div>
+          <select id='alarmmins' ></select>
+          </div>
+        </label>
+        <label>
+          <div>
+          <select id='alarmsecs' ></select>
+          </div>
+        </label>
+    </div>
+    <div class="alarm-clock-button">
+        <button onclick="setAlarm()">Set Alarm</button>
+        <button onclick="clearAlarm()">Clear Alarm</button>
+    </div>
+    <hr>
+    <script src="script.js"></script>
+</body>
+</html>
